@@ -18,5 +18,5 @@ gemiddelde = total / rondje   #berekent het gemiddelde
 print(gemiddelde) #print het gemiddelde
 print(snelste) #print het snelste
 print(langzaamste) #print het langzaamste
-                    
+     #auteur gijsbert keja               
                    
