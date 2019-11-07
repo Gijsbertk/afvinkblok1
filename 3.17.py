@@ -12,3 +12,4 @@ if antwoord == 'nee': #voer het volgende blok uit als de input gelijk is aan de 
             if aaww == 'nee': #voer het volgende blok uit als de input gelijk is aan de if statement oftewel als er nee wordt gegeven
                 print('Koop een nieuwe router') #print statement met een opdracht om uit te voeren
     
+#auteur gijsbert keja
