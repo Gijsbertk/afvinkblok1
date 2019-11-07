@@ -79,41 +79,42 @@ def main():
     TCG = sequentie.count("TCGA") #telt het eiwit
 
 
-    if CT == 1:
-        print('DdeI komt maar 1 keer voor')
-    elif CT > 1:
-        print('DdeI komt',CT,'keer voor')
-    elif CT == 0:
-        print('DdeI komt niet voor')
+    if CT == 1: # if statement vergelijkt waarde 
+        print('DdeI komt maar 1 keer voor')#print als de statement true is
+    elif CT > 1: #elif statement vergelijkt waarde 
+        print('DdeI komt',CT,'keer voor')#print als de statement true is
+    elif CT == 0: #elif statement vergelijkt waarde 
+        print('DdeI komt niet voor')#print als de statement true is
     
-    if TC == 1:
-        print('BspMII komt maar 1 keer voor')
-    elif TC > 1:
-        print('BspMII komt',CT,'keer voor')
-    elif TC == 0:
-        print('BspMII komt niet voor')
+    if TC == 1: #elif statement vergelijkt waarde 
+        print('BspMII komt maar 1 keer voor')#print als de statement true is
+    elif TC > 1: #elif statement vergelijkt waarde 
+        print('BspMII komt',CT,'keer voor')#print als de statement true is
+    elif TC == 0: #elif statement vergelijkt waarde 
+        print('BspMII komt niet voor')#print als de statement true is
     
        
-    if GA == 1:
-        print('EcoRI komt maar 1 keer voor')
-    elif GA > 1:
-        print('EcoRI komt',CT,'keer voor')
-    elif GA == 0:
-        print('EcoRI komt niet voor')
+    if GA == 1: #elif statement vergelijkt waarde 
+        print('EcoRI komt maar 1 keer voor')#print als de statement true is
+    elif GA > 1: #elif statement vergelijkt waarde 
+        print('EcoRI komt',CT,'keer voor')#print als de statement true is
+    elif GA == 0: #elif statement vergelijkt waarde 
+        print('EcoRI komt niet voor')#print als de statement true is
         
     
-    if AA == 1:
-        print('HindIII komt maar 1 keer voor')
-    elif AA > 1:
-        print('HindIII komt',CT,'keer voor')
-    elif AA == 0:
-        print('HindIII komt niet voor')
+    if AA == 1: #elif statement vergelijkt waarde 
+        print('HindIII komt maar 1 keer voor')#print als de statement true is
+    elif AA > 1: #elif statement vergelijkt waarde 
+        print('HindIII komt',CT,'keer voor')#print als de statement true is
+    elif AA == 0: #elif statement vergelijkt waarde 
+        print('HindIII komt niet voor') #print als de statement true is
         
-    if TCG == 1:
-        print('TaqI komt maar 1 keer voor')
-    elif TCG > 1:
-        print('TaqI komt',CT,'keer voor')
-    elif TCG == 0:
-        print('TaqI komt niet voor')
+    if TCG == 1: #elif statement vergelijkt waarde 
+        print('TaqI komt maar 1 keer voor') #print als de statement true is
+    elif TCG > 1: #elif statement vergelijkt waarde 
+        print('TaqI komt',CT,'keer voor') #print als de statement true is 
+    elif TCG == 0: #elif statement vergelijkt waarde 
+        print('TaqI komt niet voor') #print als de statement true is
         
 main()
+#auteur gijsbert keja
