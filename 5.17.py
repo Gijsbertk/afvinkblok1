@@ -1,16 +1,16 @@
-nummer = int(input('Kies een nummer: '))
+nummer = int(input('Kies een nummer: ')) #vraagt om input voor de variabele
 
 
 
 def main():
-    reken()
+    reken() #aanropen functie
 
 
-def reken():
-    if nummer % 2 == 0:
-        print('Je hebt geen prime nummer')
-    else:
-        print('je hebt een prime nummer')
+def reken(): #functie
+    if nummer % 2 == 0: #als input gelijk is de statement
+        print('Je hebt geen prime nummer') #print dit statement
+    else: #als het niet gelijk aam de if statement
+        print('je hebt een prime nummer') #print dit statement
     
 
 
@@ -20,3 +20,4 @@ def reken():
 
 
 main()
+#auteur Gijsbert Keja
