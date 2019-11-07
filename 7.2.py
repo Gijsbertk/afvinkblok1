@@ -10,3 +10,4 @@ ticket = "" #variabele met een spatie
 for y in nummers: #itereert de variabele
     ticket += str (x) #voegt per iteratie regel toe
 print (ticket)#print variabele
+#auteur gijsbert keja
