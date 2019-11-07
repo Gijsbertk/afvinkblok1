@@ -5,6 +5,15 @@ seq = "ACTAGCAACCTCAAACAGACACCATGGTGCACCTGACTCCTGTGGAGAAGTCTGCCGTTACTGCCCTGTGGGG
 from tkinter import filedialog
 from tkinter import *
 
+def main():
+    seq = openbestand()
+    enzymen(seq)
+    match()
+    match2()
+    zoek()
+    
+    
+    
 
 def openbestand():
     root = Tk()
@@ -42,13 +51,13 @@ def match2(): #functie
             o = o+" " * (index - len(o)) + str(seqenzym) # geeft var een neiwue waarde bij elke iteratie 
             index += len(seqenzym) #voegt waarde toe na elke iteratie
         
-            print (seq) #print var
-            print (o) #print var 
+       print (seq) #print var
+       print (o) #print var 
+       return eiwit, seq         
 
 
 
-
-def enzymen(): #functie 
+def enzymen(seq): #functie 
     knipenzymen = [] #lege lijst 
     bestand = open ("enzymen.txt") # openend bestand
     for regel in bestand: #itereert dmv var 
