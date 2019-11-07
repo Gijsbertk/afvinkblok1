@@ -21,34 +21,34 @@ def lees_inhoud(bestands_naam):
     Hieronder vind je de return nodig om deze twee lijsten op te leveren
     """
    
-    bestand = open(bestands_naam).readlines()[0:]
-    bestand = "".join(bestand)
+    bestand = open(bestands_naam).readlines()[0:] #opent bestand en leest het helemaal
+    bestand = "".join(bestand) #maakt alles itereerbaar
     
     
-    split = bestand.split("\n", 1)
+    split = bestand.split("\n", 1) # split het bestand op gegeven waarde
 
-    header = split[0]
-    seq = split[1]
-    seq = "".join(seq).replace("\n","")
-    print (seq)
-    print ("")
-    print (header)
+    header = split[0] #var krijgt waarde
+    seq = split[1] #var krijgt waarde
+    seq = "".join(seq).replace("\n","")  #maakt alles itereerbaar en vervangt dat op \n
+    print (seq) #print var 
+    print ("") #print witregel
+    print (header) #print var
         
-    return header, seq
+    return header, seq #returned var
 
     
-def is_dna(seq):
+def is_dna(seq): 
     """Deze functie bepaalt of de sequentie (een element uit seqs)
     DNA is.
     Indien ja, return True
     Zo niet, return False
     """
     #bekijken of het een dna sequentie is
-    tel = seq.count ("A") + seq.count ("T") + seq.count ("C") + seq.count ("G")
-    if tel == len(seq):
-        print (True)
+    tel = seq.count ("A") + seq.count ("T") + seq.count ("C") + seq.count ("G") # telt alle waarde bij elkaar op 
+    if tel == len(seq): #kijkt of staetment true is 
+        print (True) #print var
     else:
-        print (False)
+        print (False)  #print var
 
 def knipt(seq):
     """Bij deze functie kan je een deel van de code die je de afgelopen 
@@ -60,11 +60,11 @@ def knipt(seq):
     """
     
     #bekijken of het een knipenzym heeft
-    Ddell = "CTGAG"
-    if seq.find(Ddell) != -1:
-        print ("Ddell knipt er in")
-    else:
-        print ("Ddell knipt er niet in")
+    Ddell = "CTGAG" #var krijgt waarde
+    if seq.find(Ddell) != -1: #kijkt of statement true is
+        print ("Ddell knipt er in") #print de haakejs
+    else: #als satement niet true is 
+        print ("Ddell knipt er niet in") #print de haakejs
 
 
 def main():
@@ -78,8 +78,8 @@ def main():
 
 
     # schrijf hier de rest van de code nodig om de aanroepen te doen
-    header, seq = lees_inhoud("lamaseq.fasta")
-    is_dna(seq)
-    knipt(seq)
+    header, seq = lees_inhoud("lamaseq.fasta") #returned var en ropet def aan
+    is_dna(seq) #verwerkt var en roept def aan
+    knipt(seq) # vewerkt var en roept def aan
     
 main()
