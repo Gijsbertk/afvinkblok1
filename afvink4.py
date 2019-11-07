@@ -31,20 +31,20 @@ bestand = open('enzymen.txt')
 # Verwijderen het dakje uit de seq met seq.replace("^","")
 # --------------------------------------------------------------------
 #bestand = bestand.readlines()
-bes = []
-for regel in bestand:
-    enzym, seq = regel.split()
-    seqeuntie = seq.replace("^","")
+bes = [] # var aan lijst
+for regel in bestand: #itereert de het aan de hand vn de var
+    enzym, seq = regel.split() #split de regel
+    seqeuntie = seq.replace("^","")#header wordt gereplaced 
     
     
-    bes.append(seqeuntie)
-    if sikkel_seq.find(seqeuntie) != -1 and normaal_seq.find(seqeuntie) == -1:
-        print (enzym + 'Alleen in de sikkel wordt geknipt')
-    elif sikkel_seq.find(seqeuntie) == -1 and normaal_seq.find(seqeuntie) != -1:
-        print (enzym + 'Hierin wordt niet in de sikkel geknipt')
-    else:
-        print (enzym + 'Deze is niet mogelijk')
-print (bes)
+    bes.append(seqeuntie) #schrfijt var aan de list 
+    if sikkel_seq.find(seqeuntie) != -1 and normaal_seq.find(seqeuntie) == -1: # vergelijkt of inhoud gelijk is aan staement
+        print (enzym + 'Alleen in de sikkel wordt geknipt')#if true print
+    elif sikkel_seq.find(seqeuntie) == -1 and normaal_seq.find(seqeuntie) != -1: # vergelijkt of inhoud gelijk is aan staement
+        print (enzym + 'Hierin wordt niet in de sikkel geknipt') #if true print
+    else: #anders dan hierboven
+        print (enzym + 'Deze is niet mogelijk')#if true print
+print (bes) #print var
 # Auteur: Gijsbert Keja
 # Datum: 31-10-19
 # Functie: sikkelcel
