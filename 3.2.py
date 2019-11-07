@@ -11,3 +11,4 @@ elif breedte2 * lengte2 <= breedte1 * lengte1:
     print('de vierkant1 is groter')
 elif breedte2 * lengte2 >= breedte1 * lengte1:
     print('de vierkant2 is groter')
+#auteur gijsbert keja
