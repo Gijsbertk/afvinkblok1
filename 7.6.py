@@ -1,18 +1,18 @@
-import random
+import random # importeert library
 
 
 def main():
-    aantal = roll()
-    verwerk(aantal)
+    aantal = roll() #returned var en ropet fucntie aan
+    verwerk(aantal) #verwerkt var en roept fucntie aan
 
 
-def verwerk(aantal):
+def verwerk(aantal): #fucntie
     
-    lijst = []
-    for x in range(aantal):
-        nummer = random.randint(1, 6)
-        lijst.append(nummer)
-    print(lijst)
+    lijst = [] #maakt lege lijst
+    for x in range(aantal): # itereert var
+        nummer = random.randint(1, 6) #willekeurig nummer na iteratie
+        lijst.append(nummer) #schijft nieuwe waarde toe aan lijst
+    print(lijst) #print var
 
         
 
@@ -21,11 +21,12 @@ def verwerk(aantal):
 
 
 
-def roll():
-    aantal = int(input('Hoe vaak heb je gegooid?(je kan alleen een positieve invullen): '))
-    return aantal
+def roll(): #functie
+    aantal = int(input('Hoe vaak heb je gegooid?(je kan alleen een positieve invullen): ')) #vraagt om input
+    return aantal #returned var
 
 
 
 
 main()
+#auteur gijsbert keja
