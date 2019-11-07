@@ -34,3 +34,4 @@ if vega == 'ja':#vraag of er iemand vegan vega of gluten heeft en dan de uitkome
         if glut == 'ja':
             print('je kan naar main corner en chef')
         
+#auteur gijsbert keja
