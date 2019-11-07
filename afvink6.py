@@ -1,5 +1,5 @@
 #afvink6 git opdracht
-seq = "ACTAGCAACCTCAAACAGACACCATGGTGCACCTGACTCCTGTGGAGAAGTCTGCCGTTACTGCCCTGTGGGGCAAGGTGAACGTGGATGAAGTTGGTGGTGAGGCC"
+seq = "ACTAGCAACCTCAAACAGACACCATGGTGCACCTGACTCCTGTGGAGAAGTCTGCCGTTACTGCCCTGTGGGGCAAGGTGAACGTGGATGAAGTTGGTGGTGAGGCC" #var met waarde
 
 #opent het document.
 from tkinter import filedialog
@@ -22,57 +22,56 @@ def openbestand():
 
 
 
-def match2():
-    o = ""
-    index = 0
+def match2(): #functie
+    o = "" #lege var
+    index = 0 #var met waarde 0
 
-    B = []
-    bestand = open ("enzymen.txt")
-    for regel in bestand:
-        enzym, seq = regel.split()
-        seqenzym = seq.replace("^","")
-        B.append(seqenzym)
+    B = [] # var met lege lijst 
+    bestand = open ("enzymen.txt") #opent bestabd
+    for regel in bestand: #itereert dmv bestand 
+        enzym, seq = regel.split() #split bestand 
+        seqenzym = seq.replace("^","") # #vervangt dakje
+        B.append(seqenzym) #schrijft de var na aleke ietratie toe 
 
 
-        for eiwit in B:
-            while index < len(seq):
-                index = seq.find(seqenzym, index)
-            if index == -1:
-                break
-            o = o+" " * (index - len(o)) + str(seqenzym)
-            index += len(seqenzym)
+        for eiwit in B: #itereert dmv var
+            while index < len(seq): # iteert de seq 
+                index = seq.find(seqenzym, index) # zoek in de var 
+            if index == -1: #kijkt of statement true is  
+                break # voert uit wanneer stement true is 
+            o = o+" " * (index - len(o)) + str(seqenzym) # geeft var een neiwue waarde bij elke iteratie 
+            index += len(seqenzym) #voegt waarde toe na elke iteratie
         
-            #print (seq)
-            #print (o)
+            print (seq) #print var
+            print (o) #print var 
 
 
 
 
-
-def enzymen():
-    knipenzymen = {}
-    bestand = open ("enzymen.txt")
-    for regel in bestand:
-        enzym_name, seq = regel.split()
-        seqenzym = seq.replace("^","")
-        knipenzymen[enzym_name] = seqenzym
-    return knipenzymen
+def enzymen(): #functie 
+    knipenzymen = [] #lege lijst 
+    bestand = open ("enzymen.txt") # openend bestand
+    for regel in bestand: #itereert dmv var 
+        enzym_name, seq = regel.split() #split bij iteratie 
+        seqenzym = seq.replace("^","") #vervangt bij iteratie 
+        knipenzymen[enzym_name] = seqenzym #geeft per iteratie nieuwe waarde 
+    return knipenzymen # returned var 
     
 
-def zoek(seq, eiwit, enzym):
-    o = ""
-    index = 0
-    plaats = []
-    while index < len(seq):
-        index = seq.find(eiwit, index)
-        if index == -1:
-              break
-        o = o+" " * (index - len(o)) + str(eiwit)
-        ff = index
-        plaats.append(index)
-        index += len(eiwit)
+def zoek(seq, eiwit, enzym): # verwerkt return en functie
+    o = "" #leeg var
+    index = 0 #var met warde 0 
+    plaats = [] #var met list
+    while index < len(seq): #itereert 
+        index = seq.find(eiwit, index) #zoekt 
+        if index == -1: #kijkt of statement true is  
+              break #voert uit als statement true is 
+         o = o+" " * (index - len(o)) + str(eiwit) #voert per iteratie uit 
+         ff = index #geeft var waarde 
+         plaats.append(index) #schrijft var in list
+         index += len(eiwit) #voeft per iteratie toe 
         
-    return o,plaats
+    return o,plaats #returned value 
 
 
 
@@ -89,6 +88,6 @@ def match():
             print (seq)
             print(o)
             
-            #result[enzym].append(o)
-    #print(result)
-match()
+            result[enzym].append(o) #schrijft var aan lijst 
+    print(result) # print var 
+#gijsbert keja
